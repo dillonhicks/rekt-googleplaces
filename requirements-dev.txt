@@ -1,3 +1,4 @@
-git@github.com:vengefuldrx/rekt
+git+https://github.com/vengefuldrx/rekt-googlecore.git
 ipython
+wheel
 

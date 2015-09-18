@@ -3,7 +3,8 @@ Rekt GooglePlaces
 =================
 
 rekt is a wrapper around the requests library that makes generic rest
-operations less painful. Rekt GooglePlaces contains specific improvesments for working with googleplaces.
+operations less painful. Rekt GooglePlaces contains specific
+improvements for working with googleplaces.
 """
 import re
 import ast
@@ -29,14 +30,11 @@ setup(
     author_email='chronodynamic@gmail.com',
     description="A requests wrapper library for dynamically generating rest clients for Google's Places API",
     long_description=__doc__,
-    packages=['rekt_googeplaces'],
+    packages=['rekt_googleplaces'],
     package_data={'rekt_googleplaces' : ['specs/*.yaml']},
     include_package_data=True,
     platforms='any',
-    install_requires=[
-        'requests',
-        'PyYaml',
-    ],
+    install_requires=requirements,
     classifiers=[
         'Development Status :: 2 - Pre-Alpha',
         'Environment :: Web Environment',
@@ -47,9 +45,5 @@ setup(
         'Programming Language :: Python :: 3',
         'Topic :: Internet :: WWW/HTTP :: Dynamic Content',
         'Topic :: Software Development :: Libraries :: Python Modules'
-    ],
-    entry_points='''
-        [console_scripts]
-        rekt=rekt:main
-    '''
+    ]
 )
