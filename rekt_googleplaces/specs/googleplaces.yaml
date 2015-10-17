@@ -73,3 +73,10 @@ apis :
      types     : { default : null }
      pagetoken : { default : null }
      zagatselected : { default : null }
+ Photo :
+   url : "/photo"
+   GET:
+     key :
+     photoreference :
+     maxheight      : { default : null }
+     maxwidth       : { default : null }
