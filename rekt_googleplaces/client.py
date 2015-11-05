@@ -10,7 +10,7 @@ from . import errors
 
 __all__ = ['GooglePlacesClient']
 
-_googleplaces = rekt.load_service(load_builtin_config('googleplaces', specs.__name__))
+_googleplaces = rekt.load_service(load_builtin_config('googleplaces', specs.__name__, specs.__path__))
 
 class GooglePlacesClient(GoogleAPIClient):
     def __init__(self, api_key):
@@ -29,5 +29,3 @@ class GooglePlacesClient(GoogleAPIClient):
             if e.response.status_code == HTTPStatus.BAD_REQUEST:
                 raise errors.InvalidRequestError('get_photo2', kwargs, None, None) from e
             raise
-
-
