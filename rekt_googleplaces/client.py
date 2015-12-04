@@ -26,6 +26,6 @@ class GooglePlacesClient(GoogleAPIClient):
         try:
             return self.get_photo(**kwargs)
         except HTTPError as e:
-            if e.response.status_code == HTTPStatus.BAD_REQUEST:
+            if e.response.status_code in {HTTPStatus.BAD_REQUEST, HTTPStatus.NOT_FOUND}:
                 raise errors.InvalidRequestError('get_photo2', kwargs, None, None) from e
             raise
